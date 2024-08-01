@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grading System</title>
+<style>
+    
+body {
+	font-family: Arial, sans-serif;
+}
+
+input[type="number"] {
+	width: 50%;
+	height: 30px;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+h2 {
+	font-size: 24px;
+	color: #333;
+}
+</style>
+</head>
+<body>
+	<h1>Grading System</h1>
+	<input type="number" id="score" placeholder="Enter score (0-100)">
+	<button onclick="calculateGrade()">Calculate Grade</button>
+	<h2 id="grade"></h2>
+
+	<script>
+    function calculateGrade() {
+        var score = document.getElementById("score").value;
+        var grade = document.getElementById("grade");
+    
+        if (score >= 90 && score <= 100) {
+            grade.innerHTML = "A+";
+        } else if (score >= 80 && score < 90) {
+            grade.innerHTML = "A";
+        } else if (score >= 70 && score < 80) {
+            grade.innerHTML = "B";
+        } else if (score >= 60 && score < 70) {
+            grade.innerHTML = "C";
+        } else if (score < 60 && score >= 0) {
+            grade.innerHTML = "D";
+        } else {
+            grade.innerHTML = "Invalid score. Please enter a score between 0 and 100.";
+        }
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
